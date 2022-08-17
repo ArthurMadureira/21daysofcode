@@ -7,11 +7,10 @@
 }
 
 body {
-  background: #000;
-  /* display: grid;
-  place-items: center;
-  height: 100vh; */
-
+  background: url("./green-outer-space.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
   display: flex;
   justify-content: center
 }
