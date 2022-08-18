@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f4f4f4;
+  font-family: 'DynaPuff', cursive;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.box {
+  position: relative;
+  /* z-index: 1; */
+  height: 100px;
+  width: 250px;
+  background: #47B5FF;
+
+  border-radius: 4rem;
+  padding-inline: .2rem;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.ball {
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  background: #fff;
+  border-radius: 100%;
+  left: .1rem;
+  transition: all .5s;
+}
+
+.ball.off {
+  left: 59%;
+}
+
+.box.off {
+  background: #4FD3C4;
+}
+
+span {
+  font-size: 2rem;
+  color: rgba(0, 0, 0, .7);
+}
