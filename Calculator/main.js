@@ -1,5 +1,4 @@
 const result = document.querySelector(".value")
-
 const btns = document.querySelectorAll(".btn")
 const equalBtn = document.querySelector(".equal")
 const clearAll = document.querySelector(".clear-all")
