@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(6, 9, 48, 1);
+  /* background: #0F0E0E; */
+  font-family: 'Roboto', sans-serif;
+  color: rgba(255, 255, 255, .5);
+}
+
+.content {
+  width: 400px;
+  height: 400px;
+  padding: 2rem;
+  margin-inline: auto;
+  margin-top: 10rem;
+  background: rgb(15, 14, 14, .3);
+  box-shadow: 0px 1px 56px 8px rgba(0, 0, 150, 0.15);
+
+  animation-name: animation;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+}
+
+p {
+  color: rgba(255, 255, 255, .5);
+  margin-block: 1rem 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.input,
+button {
+  padding: .7rem 1rem;
+  border: 0;
+  outline: none;
+}
+
+.input {
+  position: relative;
+  color: white;
+  background: transparent;
+  border-bottom: 2px solid rgba(255, 255, 255, .3);
+  font-size: 1rem;
+  transition: all .3s;
+}
+
+.input:focus {
+  border-color: white;
+}
+
+.input:focus::placeholder {
+  color: rgba(255, 255, 255, .3);
+  transition: all .4s;
+}
+
+button {
+  background: rgb(38, 102, 207);
+  border-radius: .3rem;
+  color: #fff;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+button:hover {
+  box-shadow: 2px 8px 25px -3px rgba(38, 102, 207, 0.65);
+}
+
+.keep-log {
+  display: flex;
+  gap: .6rem;
+}
+
+@keyframes animation {
+  0% {
+    box-shadow: 0px 1px 56px 8px rgba(0, 0, 150, 0.15);
+  }
+
+  50% {
+    box-shadow: 0px 1px 56px 8px rgba(0, 0, 150, 0.65);
+  }
+
+  100% {
+    box-shadow: 0px 1px 56px 8px rgba(0, 0, 150, 0.15);
+  }
+}
