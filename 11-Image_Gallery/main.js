@@ -8,7 +8,7 @@ images.forEach(img => {
   img.addEventListener("click", (e) => {
 
     modalOverlay.classList.add("active")
-    imgModal = e.currentTarget.src
+    imgModal.src = e.currentTarget.src
     console.log(e.currentTarget);
   })
 })
