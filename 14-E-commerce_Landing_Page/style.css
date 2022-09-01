@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+/*---> GENERAL <--- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #010221;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ----> HEADER <---- */
+
+.logo {
+  width: 4rem;
+}
+
+header  {
+  background: #000;
+  display: flex;
+  align-items: center;
+  padding-inline: 1rem;
+  justify-content: space-between;
+}
+
+header nav{
+  width: 100vw;
+  height: 100vh;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10rem;
+  /* justify-content: center; */
+  gap: 4rem;
+
+  background: #000;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition: opacity .3s;
+}
+
+header nav.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+header  a {
+  color: rgba(255, 255, 255, .5);
+  font-size: 2rem;
+  transition: color .2s ease-out;
+}
+
+header  a:hover {
+  color: white;
+}
+
+header .menu {
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+header .header-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  gap: 2rem;
+}
+
+header .header-btns a:first-child {
+  background-color: #61fae9;
+  background-image: linear-gradient(225deg, #61fae9 0%, #27a3c9 100%);
+  padding: 1rem 2rem;
+  border-radius: .5rem;
+  color: white;
+  transition: filter .2s;
+}
+
+header .header-btns a:last-child {
+  background: white;
+  padding: 1rem 2rem;
+  border-radius: .5rem;
+  color: #000;
+  transition: filter .2s;
+}
+
+header .header-btns a:hover {
+  filter: brightness(.8);
+}
+
+.close {
+  color: white;
+  font-size: 3rem;
+
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+
+  cursor: pointer;
+}
+
+/* ---> MAIN <---- */
+main {
+  width: 80vw;
+  margin-inline: auto;
+  padding-top: 2rem;
+
+  padding-bottom: 2rem;
+}
+
+main h2 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 3.5rem;
+}
+
+/* ----> MAIN INTRODUCTION <---- */
+
+main #introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main #introduction .expand-more {
+  color: #0CF25D;
+  font-size: 5rem;
+}
+
+/* ----> MAIN PRODUCTS <--- */
+
+main #products ul.products-list{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+main #products ul.products-list li.product {
+  /* border: 1px solid rgba(255, 255, 255, .5); */
+  cursor: pointer;
+  border-radius: .6rem;
+  background: rgba(255, 255, 255, .1);
+  padding: 1rem;
+
+}
+
+main #products h2 {
+  margin-bottom: 2rem;
+}
+
+.infos {
+  margin-top: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  /* padding: 1rem; */
+}
+
+main #products ul.products-list li.product h3,
+main #products ul.products-list li.product p {
+  color: white;
+}
+
+main img {
+  max-width: 100%;
+  border-radius: .6rem;
+
+}
+
+footer {
+  width: 100vw;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  height: 6rem;
+}
+
+@media (min-width: 1440px) {
+  /* ---> HEADER <---- */
+  header nav {
+    width: auto;
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+    position: initial;
+    background: transparent;
+    flex-direction: row;
+    padding-top: 0;
+    gap: 1rem;
+  }
+
+  header nav ul {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  header a {
+    font-size: 1rem;
+  }
+
+  .close,
+  .menu {
+    display: none;
+  }
+
+  header .header-btns {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  header .header-btns:first-child,
+  header .header-btns:last-child {
+    padding: 0rem;
+  }
+
+  /* MAIN INTRODUCTION*/
+
+  main #introduction {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  main #introduction h2 {
+    width: 418px;
+  }
+
+  main #introduction .expand-more {
+    display: none;
+  }
+
+  /* ----> MAIN PRODUCTS <--- */
+
+  main #products ul.products-list {
+    flex-direction: row;
+  }
+
+}
