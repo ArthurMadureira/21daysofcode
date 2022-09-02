@@ -6,7 +6,7 @@ const country = document.querySelector(".country")
 const input = document.querySelector("input")
 const form = document.querySelector("form")
 
-const key = "e5d8d3a45b56a16390eb318427415e39"
+const key = ""
 
 
 function convertion(val) {
