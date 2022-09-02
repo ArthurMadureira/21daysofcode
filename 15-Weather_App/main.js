@@ -8,8 +8,6 @@ const form = document.querySelector("form")
 
 const key = "e5d8d3a45b56a16390eb318427415e39"
 
-let longitude
-let latitude
 
 function convertion(val) {
   return (val - 273).toFixed(2)
@@ -35,7 +33,7 @@ form.addEventListener('submit', (e) => {
       desc.textContent = "Description: " + descrip
       desc.style.textTransform = 'capitalize'
       country.textContent = "Country: " + data.sys.country
-      tempC.textContent = "Temperature: " + tempature
+      tempC.textContent = "Temperature: " + convertion(tempature) + "°C"
 
 
     })
