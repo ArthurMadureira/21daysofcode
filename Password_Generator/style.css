@@ -14,8 +14,9 @@ body {
 .content {
   background: #262626;
   width: 500px;
-  margin: 5rem;
   padding: 2rem;
+  margin-inline: auto;
+  margin-top: 10rem;
 }
 
 .pass-container {
