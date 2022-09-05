@@ -13,7 +13,7 @@ body {
 
 .content {
   background: #262626;
-  width: 500px;
+  width: min(90vw,500px);
   padding: 2rem;
   margin-inline: auto;
   margin-top: 10rem;

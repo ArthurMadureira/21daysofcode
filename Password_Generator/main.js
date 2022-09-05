@@ -1,5 +1,6 @@
 const inputRange = document.querySelector(".range")
 
+
 const upperCaseCheckbox = document.getElementById("uppercase-check")
 const lowerCaseCheckBox = document.getElementById("lowercase-check")
 const numbersCheckbox = document.getElementById("numbers-check")
@@ -15,7 +16,10 @@ let numbersArr = '1234567890'
 
 let specialCharacters = '/%()*&¨$#@!^~<>|'
 
-const arrays = []
+let arrays = []
+
+
+
 
 function disorder(value) {
   let pos, temp;
@@ -30,10 +34,11 @@ function disorder(value) {
     x += (temp)
   }
 
+
   return x
 }
 
-upperCaseCheckbox.addEventListener("change", () => {
+upperCaseCheckbox.addEventListener("change", (e) => {
   arrays.push(...upperCaseArr)
 })
 
@@ -49,15 +54,27 @@ specialCharactersCheckbox.addEventListener("change", () => {
   arrays.push(...specialCharacters)
 })
 
-inputRange.addEventListener("change", (e) => {
+const checkboxes = [upperCaseCheckbox, lowerCaseCheckBox, numbersCheckbox, specialCharactersCheckbox]
 
-
-
-  password.textContent = disorder(arrays)
-  console.log(disorder(arrays));
-
-  // for (let i = 0; i < inputRange.ariaValueMax; i++) {
-
-  // }
+checkboxes.forEach(i => {
+  if (i.checked) {
+    arrays.push()
+  }
 })
+
+
+inputRange.addEventListener("input", () => {
+  if (arrays.length == 0) {
+    password.textContent = ''
+  } else {
+    password.textContent = disorder(arrays)
+  }
+
+
+  console.log(password.textContent.includes('undefined'));
+
+  console.log(arrays.includes(upperCaseArr));
+})
+
+
 
